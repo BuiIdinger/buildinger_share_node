@@ -1,6 +1,10 @@
-#include <iostream>
+#include "Network.h"
 
 int main() {
-  std::cout << "Hello, World!" << std::endl;
+  // Start up sockets
+  network::socket::create();
+  network::socket::bind();
+  network::socket::listen();
+
   return 0;
 }
