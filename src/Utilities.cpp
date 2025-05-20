@@ -7,7 +7,7 @@ int64_t utilities::getCurrentEpoch() {
   return std::chrono::system_clock::now().time_since_epoch().count();
 }
 
-std::string getShortDate() {
+std::string utilities::getShortDate() {
   const std::time_t now = std::time(nullptr);
   const std::tm* localTime = std::localtime(&now);
 
