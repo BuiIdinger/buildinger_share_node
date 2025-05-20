@@ -65,7 +65,7 @@ void network::socket::bind() noexcept {
     log::critical(std::strerror(errno));
   }
 
-  if (bind(serverSocket, reinterpret_cast<struct sockaddr *>(&clientSocketAddress), sizeof(clientSocketAddress)) == -1) {
+  if (bind(serverSocket, reinterpret_cast<struct sockaddr *>(&serverSocketAddress), sizeof(serverSocketAddress)) == -1) {
     log::critical(std::strerror(errno));
   }
 }

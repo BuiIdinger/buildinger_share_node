@@ -11,8 +11,7 @@ namespace network::socket {
     constexpr int backlog = 50;
 
     /*
-     * Client & Server ports, maybe make this
-     * in the configuration
+     * Client & Server ports
      */
     constexpr int clientPort = 22773;
     constexpr int serverPort = 23363;
@@ -26,7 +25,7 @@ namespace network::socket {
     inline sockaddr_in clientSocketAddress;
     inline sockaddr_in serverSocketAddress;
 
-    bool setNonBlocking(const int socket) noexcept;
+    bool setNonBlocking(int socket) noexcept;
     void create() noexcept;
     void bind() noexcept;
     void listen() noexcept;
