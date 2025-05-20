@@ -8,4 +8,7 @@ namespace utilities {
 
   // Returns short date as d-m-y
   std::string getShortDate();
+
+  // Removes any whitespace from a string
+  void removeWhitespace(std::string& str);
 }

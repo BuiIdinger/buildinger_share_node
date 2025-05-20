@@ -18,3 +18,7 @@ std::string utilities::getShortDate() {
 
   return oss.str();
 }
+
+void utilities::removeWhitespace(std::string& str) {
+  std::erase_if(str, isspace);
+}
